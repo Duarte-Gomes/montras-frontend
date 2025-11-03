@@ -1,0 +1,10 @@
+<div class="container">
+
+  <p>{{ data.title }}</p>
+
+  @for (item of scan; track item._id) {
+    <p>{{ item.createdAt | date: 'dd/MM/yyyy' }} {{ item.createdAt | date: 'HH:mm:ss' }}</p>
+  }
+
+
+</div>

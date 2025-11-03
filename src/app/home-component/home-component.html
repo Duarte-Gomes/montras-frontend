@@ -1,0 +1,9 @@
+<div class="container">
+  <ul class="list-unstyled">
+    @for (item of data; track item.title) {
+      <li>
+        <a [routerLink]="['/montra', item._id]">{{ item.title }}</a>
+      </li>
+    }
+  </ul>
+</div>
