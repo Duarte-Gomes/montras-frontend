@@ -6,18 +6,10 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-home-component',
   standalone: true,
-  imports: [RouterModule],
+  imports: [],
   templateUrl: './home-component.html',
   styleUrl: './home-component.scss'
 })
-export class HomeComponent implements OnInit {
-  private httpClient = inject(HttpClient)
+export class HomeComponent {
 
-  data: any;
-
-  ngOnInit() {
-    this.httpClient.get<any>('https://montras-e0b2e3e29aa0.herokuapp.com/montras').subscribe(res => {
-      this.data = res.posts;
-    })
-  }
 }
